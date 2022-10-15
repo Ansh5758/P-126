@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Music</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+</head>
+<style>
+    body{
+        font-family: 'Comfortaa';
+        background: url('musicBG.jpeg');
+        background-size: cover;
+    }
+    .div{
+        background-color: rgb(255, 255, 255);
+        color: black;
+        padding: 10px 0px;
+        padding-bottom: 18px;
+    }
+    .button{
+        background-color: white;
+        color: black;
+        font-size: 25px;
+        border: none;
+        margin: 25px;
+        padding: 3px 13px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 7px black;
+        transition: 0.3s;
+    }
+    .button:hover{
+        box-shadow: 0px 0px 13px black;
+        transform: scale(1.15);
+        font-weight: 900;
+    }
+    marquee{
+        position: fixed;
+        bottom: 0;
+        background-color: white;
+        color: black;
+        font-size: 20px;
+        padding: 3px 0px;
+    }
+    canvas{
+        box-shadow: 0px 0px 15px black;
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+    <center>
+        <div class="div">
+            <h1>AI Music<h4>Show your left hand to play the music and show your right hand to change it.</h4>
+            </h1>
+        </div>
+        <button class="button">Play</button>
+    </center>
+    <marquee behavior="scroll" direction="left" scrollamount="20">Developed By Ansh</marquee>
+    <script>
+        function setup(){
+            x = screen.width;
+            y = x - 550;
+            canvas = createCanvas(550, 400);
+            canvas.position(y/2, 250)
+        }
+    </script>
+</body>
+
+</html>
